@@ -14,7 +14,8 @@ const Trade = () => {
     const onClickFilter = () => setFilter(!filter);
     const isActive = (tab: string) => (
         (!searchParams.get('tab') && tab === 'completed') ||
-        (tab === searchParams.get('tab') ? ' shadow-md text-white bg-zinc-600 shadow-zinc-600' : '')
+        (tab === searchParams.get('tab'))
+        ? ' shadow-md text-white bg-zinc-600 shadow-zinc-600' : ''
     );
 
     return (
