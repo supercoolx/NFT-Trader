@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { MetaMaskProvider } from 'metamask-react';
 import { Provider } from 'react-redux';
 import store from 'redux/store';
 import reportWebVitals from './reportWebVitals';
@@ -9,7 +10,9 @@ import 'assets/styles/index.css';
 ReactDOM.render(
     <React.StrictMode>
       <Provider store={store}>
-        <App />
+        <MetaMaskProvider>
+          <App />
+        </MetaMaskProvider>
       </Provider>
     </React.StrictMode>,
     document.getElementById('root')
