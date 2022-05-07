@@ -12,7 +12,10 @@ const Trade = () => {
         return () => setSearchParams({ tab });
     }
     const onClickFilter = () => setFilter(!filter);
-    const isActive = (tab: string) => (tab === searchParams.get('tab') ? ' shadow-md text-white bg-zinc-600 shadow-zinc-600' : '');
+    const isActive = (tab: string) => (
+        (searchParams.get('tab') === null && tab === 'completed') &&
+        (tab === searchParams.get('tab') ? ' shadow-md text-white bg-zinc-600 shadow-zinc-600' : '')
+    );
 
     return (
         <div className='px-20 py-10'>

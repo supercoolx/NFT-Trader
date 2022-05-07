@@ -30,8 +30,8 @@ const Nav = () => {
                     <div className='font-bold'>NFT Trader</div>
                 </Link>
                 <div className='flex gap-8 text-lg font-bold'>
-                    <NavLink to='/trade' className={({ isActive }) => (isActive ? 'border-b-4 border-b-teal-300' : 'border-b-4 border-b-transparent hover:border-b-teal-300')}>TradeSquads</NavLink>
-                    <NavLink to='/history' className={({ isActive }) => (isActive ? 'border-b-4 border-b-teal-300' : 'border-b-4 border-b-transparent hover:border-b-teal-300')}>Mint Trade Squad</NavLink>
+                    <NavLink to='/trade' className={({ isActive }) => (isActive ? 'border-b-4 border-b-teal-300' : 'border-b-4 border-b-transparent hover:border-b-teal-300')}>My Trades</NavLink>
+                    <NavLink to='/history' className={({ isActive }) => (isActive ? 'border-b-4 border-b-teal-300' : 'border-b-4 border-b-transparent hover:border-b-teal-300')}>Deals History</NavLink>
                 </div>
             </div>
         </Fragment>
