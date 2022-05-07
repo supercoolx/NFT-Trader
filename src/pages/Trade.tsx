@@ -25,15 +25,15 @@ const Trade = () => {
             </div>
             <div className='flex gap-5 mt-10'>
                 <div className='flex flex-col gap-3'>
-                    <div onClick={onClickTab('completed')} className={'flex items-center w-40 gap-2 px-3 py-4 rounded-md cursor-pointer transition-all duration-200 hover:shadow-md hover:text-white hover:bg-zinc-600 hover:shadow-zinc-600' + isActive('completed')}>
+                    <div onClick={onClickTab('completed')} className={'flex items-center w-40 gap-2 px-3 py-4 rounded-md cursor-pointer' + isActive('completed')}>
                         <BsCheckCircle size={25} color='#00ff00' />
                         <div className='text-lg font-bold'>Completed</div>
                     </div>
-                    <div onClick={onClickTab('pending')} className={'flex items-center w-40 gap-2 px-3 py-4 rounded-md cursor-pointer transition-all duration-200 hover:shadow-md hover:text-white hover:bg-zinc-600 hover:shadow-zinc-600' + isActive('pending')}>
+                    <div onClick={onClickTab('pending')} className={'flex items-center w-40 gap-2 px-3 py-4 rounded-md cursor-pointer' + isActive('pending')}>
                         <BsGearWideConnected size={25} color='#cfcf0a' />
                         <div className='text-lg font-bold'>Pending</div>
                     </div>
-                    <div onClick={onClickTab('canceled')} className={'flex items-center w-40 gap-2 px-3 py-4 rounded-md cursor-pointer transition-all duration-200 hover:shadow-md hover:text-white hover:bg-zinc-600 hover:shadow-zinc-600' + isActive('canceled')}>
+                    <div onClick={onClickTab('canceled')} className={'flex items-center w-40 gap-2 px-3 py-4 rounded-md cursor-pointer' + isActive('canceled')}>
                         <VscTrash size={25} color='#ff0000' />
                         <div className='text-lg font-bold'>Canceled</div>
                     </div>
