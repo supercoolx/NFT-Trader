@@ -7,7 +7,7 @@ const Nav = () => {
     const [connectButtonText, setText] = useState<string>('CONNECT WALLET');
     const { status, connect, account } = useMetaMask();
     const connectWallet = () => {
-        // if(status !== 'notConnected') return;
+        if(status !== 'notConnected') return;
         connect();
     }
     useEffect(() => {
