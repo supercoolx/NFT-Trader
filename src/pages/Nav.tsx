@@ -22,7 +22,7 @@ const Nav = () => {
         <Fragment>
             <div className='flex justify-between px-3 py-1 bg-zinc-800'>
                 <div></div>
-                <div onClick={connectWallet} className='text-green-400 cursor-pointer hover:underline'>{connectButtonText}</div>
+                <div onClick={connectWallet} className='font-sans text-green-400 cursor-pointer hover:underline'>{connectButtonText}</div>
             </div>
             <div className='flex items-center justify-between px-5 py-3'>
                 <Link to='/'>

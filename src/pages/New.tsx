@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import { Jazzicon } from '@ukstv/jazzicon-react';
 import { useMetaMask } from 'metamask-react';
-import mascotte from 'assets/img/mascotte-gray.svg';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { BsArrowRight, BsArrowLeft } from 'react-icons/bs';
 
