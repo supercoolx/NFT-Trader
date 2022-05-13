@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { useMoralis } from 'react-moralis';
 import { Link, NavLink } from 'react-router-dom';
+import { BsDiscord, BsTwitter } from 'react-icons/bs';
 import logo from 'assets/img/logo.svg';
 
 const Nav = () => {
@@ -15,8 +16,14 @@ const Nav = () => {
     
     return (
         <Fragment>
+            <div className='py-2 font-bold text-center text-white bg-purple-700 cursor-pointer hover:underline'>
+                Trade Squad NFT owners pay no trading fees! Mint now
+            </div>
             <div className='flex justify-between px-3 py-1 bg-zinc-800'>
-                <div></div>
+                <div className='flex items-center gap-3'>
+                    <BsDiscord size={20} color='white' />
+                    <BsTwitter size={20} color='white' />
+                </div>
                 <div onClick={connectWallet} className='font-sans text-green-400 cursor-pointer hover:underline'>{text}</div>
             </div>
             <div className='flex items-center justify-between px-5 py-3 font-futura'>
