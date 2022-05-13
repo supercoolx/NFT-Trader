@@ -17,7 +17,7 @@ const NewLeft = () => {
     const openModal = () => {
         Moralis.Web3API.account.getNFTs({
             chain: 'eth',
-            address: '0xb3b16685CA2D2a764882e2Bb2a8D3D769Cd74145'
+            address: user?.get('ethAddress')
         }).then(nfts => {
             nfts.result?.sort((a, b) => (a.name > b.name) ? 1 : -1)
             setNfts(nfts.result || []);

@@ -81,7 +81,7 @@ const NewRight = () => {
                                         <div className='flex-1'>{nft.name}</div>
                                     </div>
                                 )) :
-                                <div>You don't have any NFT.</div>
+                                <div>Counterparty don't have any NFT.</div>
                             }
                         </div>
                     </div>
