@@ -1,30 +1,25 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import { useMetaMask } from 'metamask-react';
+import { useMoralis } from 'react-moralis';
 import { Link, NavLink } from 'react-router-dom';
 import logo from 'assets/img/logo.svg';
 
 const Nav = () => {
-    const [connectButtonText, setText] = useState<string>('CONNECT WALLET');
-    const { status, connect, account } = useMetaMask();
+    const [text, setText] = useState<string>('CONNECT WALLET');
+    const { authenticate, isAuthenticated, user } = useMoralis();
     const connectWallet = () => {
-        if(status !== 'notConnected') return;
-        connect();
+        !isAuthenticated && authenticate();
     }
     useEffect(() => {
-        status === 'initializing' && setText('INITIALIZING');
-        status === 'unavailable' && setText('UNAVAILABLE');
-        status === 'notConnected' && setText('CONNECT WALLET');
-        status === 'connecting' && setText('CONNECTING...');
-        status === 'connected' && setText(account.slice(0, 6) + '...' + account.slice(account.length - 4, account.length));
-    }, [status, account])
-
+        setText(isAuthenticated ? user?.get('ethAddress') : 'CONNECT WALLET');
+    }, [isAuthenticated, user]);
+    
     return (
         <Fragment>
             <div className='flex justify-between px-3 py-1 bg-zinc-800'>
                 <div></div>
-                <div onClick={connectWallet} className='font-sans text-green-400 cursor-pointer hover:underline'>{connectButtonText}</div>
+                <div onClick={connectWallet} className='font-sans text-green-400 cursor-pointer hover:underline'>{text}</div>
             </div>
-            <div className='flex items-center justify-between px-5 py-3'>
+            <div className='flex items-center justify-between px-5 py-3 font-futura'>
                 <Link to='/'>
                     <img src={logo} alt='' className='h-10' />
                 </Link>

@@ -4,7 +4,7 @@ import nfttrader_logo_home from "assets/img/nfttrader-logo-home.svg";
 
 const Home = () => {
     return (
-        <div className='px-2'>
+        <div className='px-2 font-futura'>
             <div className='flex flex-col items-center pt-12'>
                 <img src={nfttrader_logo_home} alt='' className='h-40' />
                 <h1 className='pt-10 text-3xl'>Swap Your NFTs & Crypto Securely and Easily</h1>
